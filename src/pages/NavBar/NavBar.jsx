@@ -37,11 +37,11 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <div>
         <div
-          className={`navbar fixed   z-10 text-black ${
-            scroll ? "bg-white " : "bg-transparent "
+          className={`navbar fixed px-2 py-1 md:px-16 md:py-4 z-10  ${
+            scroll ? "bg-white text-black" : "bg-transparent text-white"
           } `}
         >
           <div className="navbar-start">
@@ -58,7 +58,7 @@ const NavBar = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
-                    d="M9 5l7 7-7 7"
+                    d="M4 6h16M4 12h8m-8 6h16"
                   />
                 </svg>
               </label>
@@ -76,7 +76,7 @@ const NavBar = () => {
             <ul className="menu menu-horizontal px-1 ">{navOptions}</ul>
           </div>
           <div className="navbar-end">
-            <button className="btn glass">Hire Us</button>
+            <button className="btn btn-primary">Hire Us</button>
           </div>
         </div>
       </div>
