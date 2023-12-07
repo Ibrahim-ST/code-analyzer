@@ -3,78 +3,18 @@ import TeamMemberCard from "../Team/TeamMemberCard ";
 
 const Contact = () => {
   return (
-    // <section className="bg-white dark:bg-gray-900">
-    //   <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-    //     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-    //       Contact Us
-    //     </h2>
-    //     <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-    //       Got a technical issue? Want to send feedback about a beta feature?
-    //       Need details about our Business plan? Let us know.
-    //     </p>
-    //     <form action="#" className="space-y-8">
-    //       <div>
-    //         <label
-    //           htmlhtmlFor="email"
-    //           className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-    //         >
-    //           Your email
-    //         </label>
-    //         <input
-    //           type="email"
-    //           id="email"
-    //           className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-    //           placeholder="name@flowbite.com"
-    //           required
-    //         />
-    //       </div>
-    //       <div>
-    //         <label
-    //           htmlhtmlFor="subject"
-    //           className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-    //         >
-    //           Subject
-    //         </label>
-    //         <input
-    //           type="text"
-    //           id="subject"
-    //           className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-    //           placeholder="Let us know how we can help you"
-    //           required
-    //         />
-    //       </div>
-    //       <div className="sm:col-span-2">
-    //         <label
-    //           htmlhtmlFor="message"
-    //           className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
-    //         >
-    //           Your message
-    //         </label>
-    //         <textarea
-    //           id="message"
-    //           rows="6"
-    //           className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-    //           placeholder="Leave a comment..."
-    //         ></textarea>
-    //       </div>
-    //       <div className="flex justify-center">
-    //         <button
-    //           type="button"
-    //           className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-    //         >
-    //           Send Message
-    //         </button>
-    //       </div>
-    //     </form>
-    //   </div>
-    // </section>
-    <div className="container my-24 mx-auto md:px-6">
+    <div className="container my-16 mx-auto md:layout">
+      <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+        Contact Us
+      </h2>
       <section className="mb-32">
-        <div className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('https://mdbcdn.b-cdn.net/img/new/textures/full/171.jpg')]">
-        <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
-      <p className="mb-8 lg:mb-16 font-light text-center text-white dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
-  </div>
+        <div className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('https://mdbcdn.b-cdn.net/img/new/textures/full/171.jpg')] rounded-lg">
+          <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+            <p className="mb-8 lg:mb-16 font-light text-center text-white dark:text-gray-400 sm:text-xl">
+              Got a technical issue? Want to send feedback about a beta feature?
+              Need details about our Business plan? Let us know.
+            </p>
+          </div>
         </div>
         <div className="container px-6 md:px-12">
           <div className="block rounded-lg bg-[hsla(0,0%,100%,0.7)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
@@ -218,7 +158,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-
-
-

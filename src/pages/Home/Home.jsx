@@ -1,21 +1,22 @@
-import bg from "../../assets/header.jpg";
+import bg from "../../assets/headerNew.jpg";
+import heroVector from '../../assets/hero-vector2.png'
+import PrimaryButton from "../../components/PrimaryButton";
 const Home = () => {
   return (
     <div
-      className="min-h-screen  flex items-center"
+      className="hero min-h-screen flex flex-col sm:flex-row items-center "
       style={{
         backgroundImage: `url(${bg})`,
         backgroundRepeat: "no-repeat",
-        backgroundBlendMode: "difference",
       }}
     >
-      <div className="px-2 py-1 md:px-16 md:py-4">
-        <div className="relative flex items-start sm:-mt-[18rem]">
+      <div className="px-2 py-1 md:px-16 md:py-4 sm:w-1/2 bg-opacity-30">
+        <div className="relative flex items-start sm:-mt-[8rem]">
           {/* Background with lowered opacity */}
           <div className="absolute hidden sm:block inset-0 bg-black opacity-25 h-screen rounded-t-3xl"></div>
 
           {/* Content with full opacity */}
-          <div className="relative text-white text-5xl sm:text-7xl sm:mt-80 ">
+          <div className="relative text-white text-5xl sm:text-7xl mt-40 sm:mt-80 ">
             <div className="pr-0 sm:pr-4">
               <span className="flex gap-1 sm:gap-4 items-center justify-center sm:justify-between ">
                 Lets make
@@ -39,12 +40,7 @@ const Home = () => {
               </span>
               <span className="text-center">software together!</span> <br />
               <div>
-                <button
-                  type="button"
-                  className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 "
-                >
-                  Get Started
-                </button>
+                <PrimaryButton label={"Get Started"}></PrimaryButton>
                 <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-full group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
                   <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0">
                     Explore Solutions
@@ -54,6 +50,9 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className=" sm:w-1/2 flex justify-center">
+        {/* <img src={heroVector} alt=""  className="w-2/3"/> */}
       </div>
     </div>
   );

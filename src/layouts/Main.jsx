@@ -1,3 +1,4 @@
+import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
 import Footer from "../pages/Footer/Footer";
 import Home from "../pages/Home/Home";
@@ -10,6 +11,7 @@ const Main = () => {
     <div className="font-inter ">
       <NavBar></NavBar>
       <Home></Home>
+      <About></About>
       <Project />
       <Team/>
       <Contact></Contact>

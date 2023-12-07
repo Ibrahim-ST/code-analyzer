@@ -1,4 +1,4 @@
-
+import logo from "../../assets/logo-text-white.png";
 const Footer = () => {
 
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-wrap md:text-left text-center order-first">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 stroke="currentColor"
@@ -19,8 +19,9 @@ const Footer = () => {
                 viewBox="0 0 24 24"
               >
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
-              <span className="ml-3 text-2xl font-bold text-white">Code Analyzer</span>
+              </svg> */}
+              <img src={logo} className='w-11/12' alt="" />
+              {/* <span className="ml-3 text-2xl font-bold text-white">Code Analyzer</span> */}
             </a>
             <h3 className="my-4 text-2xl">
               Bespoke software <br /> solutions
@@ -89,19 +90,19 @@ const Footer = () => {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-white hover:text-gray-800">Contact</a>
+                <a className="text-white hover:text-gray-400">Contact</a>
               </li>
               <li>
-                <a className="text-white hover:text-gray-800">About Us</a>
+                <a className="text-white hover:text-gray-400">About Us</a>
               </li>
               <li>
-                <a className="text-white hover:text-gray-800">Company</a>
+                <a className="text-white hover:text-gray-400">Company</a>
               </li>
               <li>
-                <a className="text-white hover:text-gray-800">Services</a>
+                <a className="text-white hover:text-gray-400">Services</a>
               </li>
               <li>
-                <a className="text-white hover:text-gray-800">Blog</a>
+                <a className="text-white hover:text-gray-400">Blog</a>
               </li>
             </nav>
           </div>
@@ -111,16 +112,16 @@ const Footer = () => {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-white hover:text-gray-800">First Link</a>
+                <a className="text-white hover:text-gray-400">First Link</a>
               </li>
               <li>
-                <a className="text-white hover:text-gray-800">Second Link</a>
+                <a className="text-white hover:text-gray-400">Second Link</a>
               </li>
               <li>
-                <a className="text-white hover:text-gray-800">Third Link</a>
+                <a className="text-white hover:text-gray-400">Third Link</a>
               </li>
               <li>
-                <a className="text-white hover:text-gray-800">Fourth Link</a>
+                <a className="text-white hover:text-gray-400">Fourth Link</a>
               </li>
             </nav>
           </div>
