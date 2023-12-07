@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"; 
-
+import { useEffect, useState } from "react";
+import logo from "../../assets/logo.png";
 const NavBar = () => {
   const navOptions = (
     <>
@@ -37,11 +37,11 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <div>
         <div
-          className={`navbar fixed   z-10 text-black ${
-            scroll ? "bg-white " : "bg-transparent "
+          className={`navbar fixed px-2 py-1 md:px-16 md:py-4 z-10  ${
+            scroll ? "bg-white text-black" : "bg-transparent text-white"
           } `}
         >
           <div className="navbar-start">
@@ -58,7 +58,7 @@ const NavBar = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
-                    d="M9 5l7 7-7 7"
+                    d="M4 6h16M4 12h8m-8 6h16"
                   />
                 </svg>
               </label>
@@ -69,14 +69,16 @@ const NavBar = () => {
                 {navOptions}
               </ul>
             </div>
-            {/* <img className="w-10 hidden md:block" src="./lo.png" alt="" /> */}
-            <h4>Code Analyzer</h4>
+            <a href="your_link_here" className="flex items-center">
+              <img className="w-16" src={logo} alt="" />
+              <h4 className="font-semibold text-xl md:text-2xl pl-3">CODE ANALYZER</h4>
+            </a>
           </div>
           <div className="navbar-center hidden lg:flex  ">
-            <ul className="menu menu-horizontal px-1 ">{navOptions}</ul>
+            <ul className="menu menu-horizontal px-1 font-bold tracking-widest">{navOptions}</ul>
           </div>
           <div className="navbar-end">
-            <button className="btn glass">Hire Us</button>
+            <button className="btn btn-primary text-white">Hire Us</button>
           </div>
         </div>
       </div>
