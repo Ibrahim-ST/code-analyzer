@@ -40,7 +40,7 @@ const NavBar = () => {
     <div className="">
       <div>
         <div
-          className={`navbar fixed px-2 py-1 md:px-16 md:py-4 z-10  ${
+          className={`navbar fixed layout z-10  ${
             scroll ? "bg-white text-black" : "bg-transparent text-white"
           } `}
         >
@@ -71,14 +71,23 @@ const NavBar = () => {
             </div>
             <a href="your_link_here" className="flex items-center">
               <img className="w-16" src={logo} alt="" />
-              <h4 className="font-semibold text-xl md:text-2xl pl-3">CODE ANALYZER</h4>
+              <h4 className="font-semibold text-xl md:text-2xl pl-3">
+                CODE ANALYZER
+              </h4>
             </a>
           </div>
           <div className="navbar-center hidden lg:flex  ">
-            <ul className="menu menu-horizontal px-1 font-bold tracking-widest">{navOptions}</ul>
+            <ul className="menu menu-horizontal px-1 font-bold tracking-widest">
+              {navOptions}
+            </ul>
           </div>
           <div className="navbar-end">
-            <button className="btn btn-primary text-white">Hire Us</button>
+            <button
+              type="button"
+              className="text-white bg-gradient-to-br from-emerald-400 to-purple-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+            >
+              Contact Us
+            </button>
           </div>
         </div>
       </div>

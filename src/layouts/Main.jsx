@@ -6,7 +6,7 @@ import Team from "../pages/Team/Team";
 
 const Main = () => {
   return (
-    <div className="font-inter">
+    <div className="font-inter ">
       <NavBar></NavBar>
       <Home></Home>
       <Project />
