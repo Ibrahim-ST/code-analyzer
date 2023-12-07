@@ -1,15 +1,9 @@
-import footerBg from "../../assets/footer/Frame.png";
+
 const Footer = () => {
-  const bgStyle = {
-    backgroundImage: `url(${footerBg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    // Add backgroundSize only for large devices (lg and above)
-    backgroundSize: "42%",
-  };
+
   return (
     // <!-- ====== Footer Section Start -->
-    <footer className="body-font bg-[#24A556] " style={bgStyle}>
+    <footer className="body-font bg-[#272343] text-white" >
       <div className="container px-20 py-12 mx-auto">
         <div className="flex flex-wrap md:text-left text-center order-first">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -26,7 +20,7 @@ const Footer = () => {
               >
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
               </svg>
-              <span className="ml-3 text-2xl font-bold">Code Analyzer</span>
+              <span className="ml-3 text-2xl font-bold text-white">Code Analyzer</span>
             </a>
             <h3 className="my-4 text-2xl">
               Bespoke software <br /> solutions
@@ -112,33 +106,33 @@ const Footer = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
               CATEGORIES
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                <a className="text-white hover:text-gray-800">First Link</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                <a className="text-white hover:text-gray-800">Second Link</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                <a className="text-white hover:text-gray-800">Third Link</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                <a className="text-white hover:text-gray-800">Fourth Link</a>
               </li>
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
               SUBSCRIBE
             </h2>
             <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
               <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
                 <label
                   htmlFor="footer-field"
-                  className="leading-7 text-sm text-gray-600"
+                  className="leading-7 text-sm text-white"
                 >
                   Placeholder
                 </label>
@@ -153,7 +147,7 @@ const Footer = () => {
                 Button
               </button>
             </div>
-            <p className="text-gray-500 text-sm mt-2 md:text-left text-center">
+            <p className="text-white text-sm mt-2 md:text-left text-center">
               Bitters chicharrones fanny pack
               <br className="lg:block hidden" />
               waistcoat green juice
