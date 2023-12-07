@@ -1,14 +1,14 @@
-import bg from "../../assets/banner.jpg";
+import bg from "../../assets/header.jpg";
 const Home = () => {
   return (
     <div
       className="min-h-screen  flex items-center"
-      style={{ backgroundImage: `url(${bg})`, backgroundRepeat: "no-repeat" }}
+      style={{ backgroundImage: `url(${bg})`, backgroundRepeat: "no-repeat", backgroundBlendMode: 'difference' }}
     >
       <div className="px-2 py-1 md:px-16 md:py-4">
         <div className="relative flex items-start">
           {/* Background with lowered opacity */}
-          <div className="absolute inset-0 bg-black opacity-25 "></div>
+          <div className="absolute inset-0 bg-black opacity-25 h-96"></div>
 
           {/* Content with full opacity */}
           <div className="relative text-white text-7xl">
