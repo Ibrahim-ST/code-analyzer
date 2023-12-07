@@ -21,3 +21,9 @@
   scrollbar-color: #4d519f #ffffff;
   scrollbar-width: thin;
 }
+
+@layer components {
+  .layout {
+    @apply px-2 py-1 md:px-16 md:py-4 
+  }
+}

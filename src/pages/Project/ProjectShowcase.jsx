@@ -42,12 +42,12 @@ const ProjectShowcaseTabs = () => {
   return (
     <div className="bg-gray-100 min-h-screen px-20 pt-20">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-8">
+        <h2 className="text-3xl font-semibold text-gray-800 pt-8 mb-8">
           Our Projects
         </h2>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center mb-6">
+        <div className="grid grid-cols-2 md:grid-cols-5 justify-center mb-6">
           <button
             className={`mr-4 mb-2 px-4 py-2 font-semibold focus:outline-none transition ${
               selectedCategory === "all"
