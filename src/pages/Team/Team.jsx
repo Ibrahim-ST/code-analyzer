@@ -7,7 +7,7 @@ const Team = () => {
   const teamMembers = [
     {
       name: "Md. Hosen Zisad",
-      role: "Software Engineer",
+      role: "Research & Software Engineer",
       image: demo_team,
       social: {
         twitter: "https://twitter.com/johndoe",
@@ -44,7 +44,7 @@ const Team = () => {
   return (
     <section className="bg-gray-100  min-h-screen px-20">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold mb-8 ">Our Team</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center">Our Team</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamMembers.map((member, id) => (
             <TeamMemberCard key={id} member={member} />
