@@ -47,7 +47,7 @@ const ProjectShowcaseTabs = () => {
         </h2>
 
         {/* Category Tabs */}
-        <div className="grid grid-cols-2 md:grid-cols-5 justify-center mb-6">
+        <div className="flex flex-wrap justify-center mb-6">
           <button
             className={`mr-4 mb-2 px-4 py-2 font-semibold focus:outline-none transition ${
               selectedCategory === "all"
