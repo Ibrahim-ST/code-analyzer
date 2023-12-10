@@ -33,11 +33,11 @@ const testimonials = [
 const Testimonial = () => {
   return (
     <>
-      <div className="container mx-auto">
+      <div className="container mx-auto my-20">
         <h2 className="text-4xl font-bold mb-8 text-center text-gray-800">
           What our clients say
         </h2>
-        <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+        <Swiper pagination={true} modules={[Pagination]}  className="mySwiper">
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <TestimonialCard

@@ -8,7 +8,7 @@ const About = () => {
         <h2 className="text-4xl font-bold mb-8 text-center">About Us</h2>
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center  -mx-4">
-            <div className="w-full px-4 lg:w-6/12">
+            <div className="w-full px-4 sm:px-0 lg:pr-20 lg:w-6/12">
               <div className="flex items-center -mx-3 sm:-mx-4">
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="py-3 sm:py-4">
