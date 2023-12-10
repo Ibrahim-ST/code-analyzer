@@ -1,7 +1,7 @@
 import React from "react";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import TeamMemberCard from "../Team/TeamMemberCard ";
-import demo_team from "../../assets/demo_team.jpg";
+import demo_team from "../../../assets/demo_team.jpg";
 
 const Team = () => {
   const teamMembers = [

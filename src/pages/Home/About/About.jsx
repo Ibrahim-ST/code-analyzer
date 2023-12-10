@@ -1,11 +1,11 @@
 import React from "react";
-import PrimaryButton from "../../components/PrimaryButton";
+import PrimaryButton from "../../../components/PrimaryButton";
 
 const About = () => {
   return (
     <>
       <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark layout min-h-screen">
-        <h2 className="text-4xl font-bold mb-8 text-center">Our Team</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center">About Us</h2>
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">

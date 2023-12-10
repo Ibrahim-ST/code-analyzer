@@ -1,7 +1,6 @@
-import bg from "../../assets/headerNew.jpg";
-import heroVector from '../../assets/hero-vector2.png'
-import PrimaryButton from "../../components/PrimaryButton";
-const Home = () => {
+import bg from "../../../assets/headerNew.jpg"; 
+import PrimaryButton from "../../../components/PrimaryButton";
+const Banner = () => {
   return (
     <div
       className="hero min-h-screen flex flex-col sm:flex-row items-center "
@@ -58,4 +57,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Banner;

@@ -1,4 +1,4 @@
-import logo from "../../assets/logo-text-white.png";
+import logo from "../../../assets/logo-text-white.png";
 const Footer = () => {
 
   return (

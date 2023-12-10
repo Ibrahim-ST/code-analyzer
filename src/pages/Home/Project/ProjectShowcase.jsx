@@ -1,5 +1,5 @@
 import { useState } from "react";
-import demo_project from "../../assets/demo-project.jpg";
+import demo_project from "../../../assets/demo-project.jpg";
 
 const ProjectShowcaseTabs = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
