@@ -73,7 +73,7 @@ const NavBar = () => {
             </div>
             <a
               href="#"
-              className="flex justify-between items-center shadow-3xl shadow-zinc-300"
+              className="flex justify-between items-center "
             >
               <img className="w-16" src={logo} alt="" />
               {/* <img className="w-1/2 " src={logoText} alt="" /> */}
@@ -87,7 +87,7 @@ const NavBar = () => {
               {navOptions}
             </ul>
           </div>
-          <div className="navbar-end hidden sm:block">
+          <div className="navbar-end hidden sm:flex">
             <button
               type="button"
               className="text-white bg-gradient-to-br from-emerald-400 to-purple-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2"
