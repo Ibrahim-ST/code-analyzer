@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     content:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     author: "Jane Smith",
     position: "CTO, Company XYZ",
     image:
