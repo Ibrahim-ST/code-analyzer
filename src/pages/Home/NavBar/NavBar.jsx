@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "../../assets/logo.png";
-import logoText from "../../assets/logo-text.png";
+import logo from "../../../assets/logo.png"; 
 const NavBar = () => {
   const navOptions = (
     <>
