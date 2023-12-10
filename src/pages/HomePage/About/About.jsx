@@ -7,22 +7,22 @@ const About = () => {
       <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark layout min-h-screen">
         <h2 className="text-4xl font-bold mb-8 text-center">About Us</h2>
         <div className="container mx-auto">
-          <div className="flex flex-wrap items-center justify-between -mx-4">
-            <div className="w-full px-4 lg:w-6/12">
+          <div className="flex flex-wrap items-center  -mx-4">
+            <div className="w-full px-4 sm:px-0 lg:pr-20 lg:w-6/12">
               <div className="flex items-center -mx-3 sm:-mx-4">
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="py-3 sm:py-4">
                     <img
                       src="https://i.ibb.co/gFb3ns6/image-1.jpg"
                       alt=""
-                      className="w-full rounded-2xl"
+                      className="w-full h-72 object-contain rounded-2xl "
                     />
                   </div>
                   <div className="py-3 sm:py-4">
                     <img
                       src="https://i.ibb.co/rfHFq15/image-2.jpg"
                       alt=""
-                      className="w-full rounded-2xl"
+                      className="w-full h-72 object-contain rounded-2xl"
                     />
                   </div>
                 </div>
@@ -31,7 +31,7 @@ const About = () => {
                     <img
                       src="https://i.ibb.co/9y7nYCD/image-3.jpg"
                       alt=""
-                      className="w-full rounded-2xl"
+                      className="w-full h-96 object-cover rounded-2xl"
                     />
                     <span className="absolute -right-7 -bottom-7 z-[-1]">
                       <svg
