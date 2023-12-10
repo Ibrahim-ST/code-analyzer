@@ -5,13 +5,15 @@ import NavBar from "../pages/Navbar/Navbar";
 import Project from "../pages/Project/Project";
 import Team from "../pages/Team/Team";
 
+
 const Main = () => {
   return (
     <div className="font-inter">
       <NavBar></NavBar>
       <Home></Home>
       <Project />
-      <Team/>
+      <Team />
+    
       <Contact></Contact>
       <Footer></Footer>
     </div>
