@@ -15,7 +15,7 @@ const Login = () => {
   const location = useLocation();
   const [showPassword, setShowPassword] = useState(false);
   const { signIn } = useContext(AuthContext);
-
+    const from = location.state?.from?.pathname || "/";
   useEffect(() => {
     loadCaptchaEnginge(6);
   }, []);
@@ -29,6 +29,7 @@ const Login = () => {
     signIn(email, password).then((result) => {
         const user = result.user;
         console.log(user);
+        navigate(from, { replace: true });
     });
   };
 

@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaCheck, FaEye, FaEyeSlash, FaList } from "react-icons/fa";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Register = () => {
   const {
@@ -11,11 +12,22 @@ const Register = () => {
     formState: { errors },
   } = useForm();
   const [showPassword, setShowPassword] = useState(false);
+  const {createUser} = useContext(AuthContext);
+
   const togglePassword = () => {
     setShowPassword(!showPassword);
   };
 
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = (data) => {
+  console.log(data);
+  createUser(data.email, data.password)
+  .then(result => {
+    const loggedUser = result.user;
+    console.log(loggedUser);
+  })
+  };
+
   return (
     <div>
       <div className=" hero min-h-screen bg-[#181547] ">
@@ -166,7 +178,7 @@ const Register = () => {
                 />
               </div>
             </form>
-            <p className="text-center text-[#181547]">
+            <p className="text-center text-[#181547] pb-2">
               <small>
                 Already have an account <Link to="/admin-login">Login</Link>
               </small>
