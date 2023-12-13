@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 const Register = () => {
     return (
       <div>
-        <Helmet>
-          <title>Sign Up | Farmhouse Academy</title>
-        </Helmet>
         <div className=" hero min-h-screen bg-[#28a745] ">
           <div className=" mt-20 hero-content flex-col lg:flex-row">
             <div className="w-1/2 text-center lg:text-left text-white">

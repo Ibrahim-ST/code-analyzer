@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
@@ -7,31 +7,37 @@ import {
   LoadCanvasTemplateNoReload,
   validateCaptcha,
 } from "react-simple-captcha";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Login = () => {
   const [disabled, setDisabled] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
   const [showPassword, setShowPassword] = useState(false);
+  const { signIn } = useContext(AuthContext);
 
   useEffect(() => {
     loadCaptchaEnginge(6);
   }, []);
+
   const handleLogin = (event) => {
     event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+    signIn(email, password).then((result) => {
+        const user = result.user;
+        console.log(user);
+    });
   };
 
   const handleValidateCaptcha = (e) => {
     const user_captcha_value = e.target.value;
-    console.log(user_captcha_value);
     if (validateCaptcha(user_captcha_value) == true) {
       setDisabled(false);
-      console.log("yes");
-    //   alert("Validated!!");
     } else {
       setDisabled(true);
-      console.log("no");
-    //   alert("Captcha Error. Swal!!");
     }
   };
   const togglePassword = () => {
@@ -102,7 +108,7 @@ const Login = () => {
             <div className="form-control mt-6">
               <input
                 disabled={disabled}
-                className="btn bg-[#28a745] hover:bg-[#25d84f]"
+                className="btn bg-[#181547ed] hover:bg-[#181547] text-white"
                 type="submit"
                 value="Login"
               />
