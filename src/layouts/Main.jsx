@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import NavBar from "../pages/HomePage/Navbar/Navbar";
 import Footer from "../pages/HomePage/Footer/Footer";
 
 import MessengerCustomerChat from "react-messenger-customer-chat";
+import NavBar from "../pages/HomePage/Navbar/Navbar";
 
 const Main = () => {
   return (

@@ -75,9 +75,9 @@ const NavBar = () => {
               href="#"
               className="flex justify-between items-center "
             >
-              <img className="w-16" src={logo} alt="" />
+              <img className="w-12" src={logo} alt="" />
               {/* <img className="w-1/2 " src={logoText} alt="" /> */}
-              <h4 className="font-semibold text-xl md:text-2xl pl-3">
+              <h4 className="font-semibold text-lg md:text-xl pl-3">
                 CODE ANALYZER
               </h4>
             </a>
