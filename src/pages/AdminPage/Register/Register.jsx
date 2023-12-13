@@ -1,8 +1,9 @@
 import { useForm } from "react-hook-form";
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaCheck, FaEye, FaEyeSlash, FaList } from "react-icons/fa";
 import { AuthContext } from "../../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const {
@@ -12,20 +13,28 @@ const Register = () => {
     formState: { errors },
   } = useForm();
   const [showPassword, setShowPassword] = useState(false);
-  const {createUser} = useContext(AuthContext);
-
+  const { createUser } = useContext(AuthContext);
+  const from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
   const togglePassword = () => {
     setShowPassword(!showPassword);
   };
 
-
   const onSubmit = (data) => {
-  console.log(data);
-  createUser(data.email, data.password)
-  .then(result => {
-    const loggedUser = result.user;
-    console.log(loggedUser);
-  })
+    console.log(data);
+    createUser(data.email, data.password).then((result) => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "Login successful.",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+
+      navigate(from, { replace: true });
+    });
   };
 
   return (
@@ -165,7 +174,10 @@ const Register = () => {
                 )}
               </div>
               <div>
-                <span onClick={togglePassword} className="flex gap-2 items-center"> 
+                <span
+                  onClick={togglePassword}
+                  className="flex gap-2 items-center"
+                >
                   <FaCheck></FaCheck>
                   <label htmlFor="showPasswordCheckbox">Show Password</label>
                 </span>
