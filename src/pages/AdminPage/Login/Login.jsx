@@ -116,7 +116,7 @@ const Login = () => {
           </form>
           <p className="text-center text-[#181547] pb-2">
             <small>
-              New Here? <Link to="/register">Create an account</Link>
+              New Here? <Link to="/admin">Create an account</Link>
             </small>
           </p>
         </div>
