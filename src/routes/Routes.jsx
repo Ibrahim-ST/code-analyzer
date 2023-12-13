@@ -23,14 +23,14 @@ export const router = createBrowserRouter([
         path: "/services",
         element: <ServicesPage></ServicesPage>,
       },
+      {
+        path: "/admin-login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/admin",
+        element: <Register></Register>,
+      },
     ],
-  },
-  {
-    path: "/admin-login",
-    element: <Login></Login>,
-  },
-  {
-    path: "/admin",
-    element: <Register></Register>,
   },
 ]);
