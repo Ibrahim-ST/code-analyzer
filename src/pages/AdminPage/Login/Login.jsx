@@ -12,9 +12,9 @@ import Swal from "sweetalert2";
 
 const Login = () => {
   const [disabled, setDisabled] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const [showPassword, setShowPassword] = useState(false);
   const { signIn } = useContext(AuthContext);
   const from = location.state?.from?.pathname || "/";
   useEffect(() => {

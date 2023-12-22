@@ -150,26 +150,26 @@ const Register = () => {
                     and one special character.
                   </p>
                 )}
-                {errors.confPassword?.type === "required" && (
+                {errors.confirmPassword?.type === "required" && (
                   <p className="text-red-600">Password is required</p>
                 )}
-                {errors.confPassword?.type === "minLength" && (
+                {errors.confirmPassword?.type === "minLength" && (
                   <p className="text-red-600">Password must be 6 characters</p>
                 )}
-                {errors.confPassword?.type === "maxLength" && (
+                {errors.confirmPassword?.type === "maxLength" && (
                   <p className="text-red-600">
                     Password must be less than 20 characters
                   </p>
                 )}
-                {errors.confPassword?.type === "pattern" && (
+                {errors.confirmPassword?.type === "pattern" && (
                   <p className="text-red-600">
                     Password must have one Uppercase one lower case, one number
                     and one special character.
                   </p>
                 )}
-                {errors.confPassword && (
+                {errors.confirmPassword && (
                   <span className="text-red-400">
-                    {errors.confPassword.message}
+                    {errors.confirmPassword.message}
                   </span>
                 )}
               </div>
