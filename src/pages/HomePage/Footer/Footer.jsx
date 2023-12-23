@@ -24,7 +24,7 @@ const Footer = () => {
               {/* <span className="ml-3 text-2xl font-bold text-white">Code Analyzer</span> */}
             </a>
             <h3 className="my-4 text-2xl">
-              Bespoke software <br /> solutions
+              Innovative software <br /> solutions
             </h3>
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
               <a className="text-white">
