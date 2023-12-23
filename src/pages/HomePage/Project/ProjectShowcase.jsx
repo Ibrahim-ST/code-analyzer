@@ -1,5 +1,5 @@
 import { useState } from "react";
-import demo_project from "../../assets/demo-project.jpg";
+import demo_project from "../../../assets/demo-project.jpg";
 
 const ProjectShowcaseTabs = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -40,16 +40,16 @@ const ProjectShowcaseTabs = () => {
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="bg-gray-100 min-h-screen px-20">
+    <div className="bg-gray-100 min-h-screen px-20 pt-20">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-8">
+        <h2 className="text-3xl font-semibold text-gray-800 pt-8 mb-8">
           Our Projects
         </h2>
 
         {/* Category Tabs */}
-        <div className="flex justify-center mb-6">
+        <div className="flex flex-wrap justify-center mb-6">
           <button
-            className={`mr-4 px-4 py-2 font-semibold focus:outline-none transition ${
+            className={`mr-4 mb-2 px-4 py-2 font-semibold focus:outline-none transition ${
               selectedCategory === "all"
                 ? "text-blue-500 border-b-2 border-blue-500 cursor-pointer"
                 : "text-gray-500 cursor-pointer"
@@ -59,7 +59,7 @@ const ProjectShowcaseTabs = () => {
             All
           </button>
           <button
-            className={`mr-4 px-4 py-2 font-semibold focus:outline-none transition ${
+            className={`mr-4 mb-2 px-4 py-2 font-semibold focus:outline-none transition ${
               selectedCategory === "software"
                 ? "text-blue-500 border-b-2 border-blue-500 cursor-pointer"
                 : "text-gray-500 cursor-pointer"
@@ -69,7 +69,7 @@ const ProjectShowcaseTabs = () => {
             Software Development
           </button>
           <button
-            className={`mr-4 px-4 py-2 font-semibold focus:outline-none transition ${
+            className={`mr-4 mb-2 px-4 py-2 font-semibold focus:outline-none transition ${
               selectedCategory === "machine-learning"
                 ? "text-blue-500 border-b-2 border-blue-500 cursor-pointer"
                 : "text-gray-500 cursor-pointer"
@@ -79,7 +79,7 @@ const ProjectShowcaseTabs = () => {
             Machine Learning
           </button>
           <button
-            className={`mr-4 px-4 py-2 font-semibold focus:outline-none transition ${
+            className={`mr-4 mb-2 px-4 py-2 font-semibold focus:outline-none transition ${
               selectedCategory === "graphic-visual"
                 ? "text-blue-500 border-b-2 border-blue-500 cursor-pointer"
                 : "text-gray-500 cursor-pointer"
@@ -89,7 +89,7 @@ const ProjectShowcaseTabs = () => {
             Graphics & Visual Design
           </button>
           <button
-            className={`px-4 py-2 font-semibold focus:outline-none transition ${
+            className={`mb-2 px-4 py-2 font-semibold focus:outline-none transition ${
               selectedCategory === "ai"
                 ? "text-blue-500 border-b-2 border-blue-500 cursor-pointer"
                 : "text-gray-500 cursor-pointer"

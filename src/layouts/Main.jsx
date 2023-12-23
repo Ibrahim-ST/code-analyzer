@@ -1,22 +1,15 @@
-import Contact from "../pages/Contact/Contact";
-import Footer from "../pages/Footer/Footer";
-import Home from "../pages/Home/Home";
-import NavBar from "../pages/Navbar/Navbar";
-import Project from "../pages/Project/Project";
-import Team from "../pages/Team/Team";
+import { Outlet } from "react-router-dom";  
+import NavBar from "../pages/HomePage/Navbar/Navbar";
+import Footer from "../pages/HomePage/Footer/Footer";
 
 
 const Main = () => {
   return (
-    <div className="font-inter">
-      <NavBar></NavBar>
-      <Home></Home>
-      <Project />
-      <Team />
-    
-      <Contact></Contact>
-      <Footer></Footer>
-    </div>
+    <>
+      <NavBar> </NavBar>
+      <Outlet> </Outlet>
+      <Footer> </Footer>
+    </>
   );
 };
 

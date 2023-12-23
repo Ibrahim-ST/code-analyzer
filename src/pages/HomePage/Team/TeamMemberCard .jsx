@@ -23,7 +23,7 @@ const TeamMemberCard = ({ member }) => {
       <img
         src={member.image}
         alt={member.name}
-        className="w-32 h-32 object-cover mx-auto mb-4 rounded-full"
+        className="w-32 h-32 object-cover mx-auto mb-4 rounded-full shadow-lg"
       />
       <h3 className="text-xl font-bold mb-2 text-center">{member.name}</h3>
       <p className="text-gray-600 text-center">{member.role}</p>
