@@ -30,7 +30,7 @@ const NavBar = () => {
         <a href="#contact">Contact</a>
       </li>
       {
-        user && <li> <a href="#contact">Dashboard</a> </li>  
+        user && <li> <a href="/dashboard">Dashboard</a> </li>  
       }
     </>
   );
