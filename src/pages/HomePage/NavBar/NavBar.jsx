@@ -1,6 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import logo from "../../../assets/logo.png"; 
+import { AuthContext } from "../../../providers/AuthProvider";
+import TopHeaderButton from "../../../components/TopHeaderButton";
 const NavBar = () => {
+  const {user, logOut} = useContext(AuthContext);
+  console.log(user);
+
+  const handleLogout = () => {
+    logOut()
+    .then(() => {})
+    .catch(error => console.log(error))
+  }
+
   const navOptions = (
     <>
       <li>
@@ -18,6 +29,9 @@ const NavBar = () => {
       <li>
         <a href="#contact">Contact</a>
       </li>
+      {
+        user && <li> <a href="#contact">Dashboard</a> </li>  
+      }
     </>
   );
 
@@ -71,10 +85,7 @@ const NavBar = () => {
                 {navOptions}
               </ul>
             </div>
-            <a
-              href="#"
-              className="flex justify-between items-center shadow-3xl shadow-zinc-300"
-            >
+            <a href="#" className="flex justify-between items-center ">
               <img className="w-16" src={logo} alt="" />
               {/* <img className="w-1/2 " src={logoText} alt="" /> */}
               <h4 className="font-semibold text-xl md:text-2xl pl-3">
@@ -87,13 +98,16 @@ const NavBar = () => {
               {navOptions}
             </ul>
           </div>
-          <div className="navbar-end hidden sm:block">
-            <button
-              type="button"
-              className="text-white bg-gradient-to-br from-emerald-400 to-purple-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2"
-            >
-              Contact Us
-            </button>
+          <div className="navbar-end hidden sm:flex">
+            {user ? (
+              <>
+                <div onClick={handleLogout}>
+                  <TopHeaderButton title={"Log Out"} />
+                </div>
+              </>
+            ) : (
+              <TopHeaderButton title={"Contact Us"} />
+            )}
           </div>
         </div>
       </div>

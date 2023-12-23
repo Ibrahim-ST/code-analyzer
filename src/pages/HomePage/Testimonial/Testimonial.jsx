@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     content:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     author: "Jane Smith",
     position: "CTO, Company XYZ",
     image:
@@ -32,9 +32,9 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <>
-      <div className="container mx-auto my-20">
-        <h2 className="text-4xl font-bold mb-8 text-center text-gray-800">
+    <div className="bg-white">
+      <div className="container mx-auto my-20  ">
+        <h2 className="text-4xl font-bold mb-8 text-center ">
           What our clients say
         </h2>
         <Swiper pagination={true} modules={[Pagination]}  className="mySwiper">
@@ -48,7 +48,7 @@ const Testimonial = () => {
           ))}
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 

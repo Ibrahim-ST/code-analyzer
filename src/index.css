@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities; 
 
+
 /* For WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 12px;
