@@ -14,6 +14,7 @@ const Teams = () => {
   const { user } = useContext(AuthContext); 
 
   const onSubmit = (data) => {
+    const email = user?.email;
     const { name, role, imgURL, twitter, linkedin, github, portfolio } = data;
     const team = {
       name,
@@ -21,7 +22,8 @@ const Teams = () => {
       imgURL,
       social: {
         twitter, linkedin, github, portfolio
-      }
+      },
+      addedBy: email
     }
     console.log(team);
     if (user && user.email) {
@@ -57,7 +59,7 @@ const Teams = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="card-body ">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Member Name</span>
+                  <span className="label-text font-semibold">Member Name</span>
                 </label>
                 <input
                   type="text"
@@ -72,7 +74,7 @@ const Teams = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Member Role</span>
+                  <span className="label-text font-semibold">Member Role</span>
                 </label>
                 <input
                   type="text"
@@ -87,7 +89,7 @@ const Teams = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Member Image</span>
+                  <span className="label-text font-semibold">Member Image</span>
                 </label>
                 <input
                   type="text"
@@ -103,7 +105,7 @@ const Teams = () => {
               <div className="flex gap-4">
                 <div className="form-control w-1/2">
                   <label className="label">
-                    <span className="label-text">Twitter</span>
+                    <span className="label-text font-semibold">Twitter</span>
                   </label>
                   <input
                     type="text"
@@ -115,7 +117,7 @@ const Teams = () => {
                 </div>
                 <div className="form-control w-1/2">
                   <label className="label">
-                    <span className="label-text">LinkedIn</span>
+                    <span className="label-text font-semibold">LinkedIn</span>
                   </label>
                   <input
                     type="text"
@@ -129,7 +131,7 @@ const Teams = () => {
               <div className="flex gap-4">
                 <div className="form-control w-1/2">
                   <label className="label">
-                    <span className="label-text">GitHub</span>
+                    <span className="label-text font-semibold">GitHub</span>
                   </label>
                   <input
                     type="text"
@@ -141,7 +143,7 @@ const Teams = () => {
                 </div>
                 <div className="form-control w-1/2">
                   <label className="label">
-                    <span className="label-text">Portfolio</span>
+                    <span className="label-text font-semibold">Portfolio</span>
                   </label>
                   <input
                     type="text"

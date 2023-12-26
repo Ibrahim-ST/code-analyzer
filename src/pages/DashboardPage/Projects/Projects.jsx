@@ -13,16 +13,20 @@ const Projects = () => {
 
   const { user } = useContext(AuthContext);
   console.log(user);
-
+  
   const onSubmit = (data) => {
-    console.log(data);
+  const email = user.email;
+  const projectData= {
+      ...data,
+      addedBy:email
+    } 
     if (user && user.email) {
       fetch("https://code-analyzer-server.vercel.app/add-projects", {
         method: "POST",
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(projectData),
       })
         .then((res) => res.json())
         .then((data) => {
@@ -55,11 +59,11 @@ const Projects = () => {
               descriptions, timelines, and relevant resources
             </p>
           </div>
-          <div className=" w-full md:w-1/2 card flex-shrink-0  max-w-sm shadow-2xl bg-base-100">
+          <div className=" w-full md:w-1/2 card flex-shrink-0  max-w-md shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body ">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Project Title</span>
+                  <span className="label-text font-semibold">Project Title</span>
                 </label>
                 <input
                   type="text"
@@ -72,9 +76,43 @@ const Projects = () => {
                   <span className="text-red-600">Title is required</span>
                 )}
               </div>
+
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Project Category</span>
+                  <span className="label-text font-semibold">Project Description</span>
+                </label>
+                <textarea
+                  type="text"
+                  {...register("description", { required: true })}
+                  name="description"
+                  placeholder="Project Description"
+                  className="input input-bordered"
+                  rows={14}
+                />
+                {errors.description && (
+                  <span className="text-red-600">Description is required</span>
+                )}
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text font-semibold">Project Image</span>
+                </label>
+                <input
+                  type="text"
+                  {...register("imgURL", { required: true })}
+                  name="imgURL"
+                  placeholder="Enter Project Image URL"
+                  className="input input-bordered"
+                />
+                {errors.imgURL && (
+                  <span className="text-red-600">
+                    Project image is required
+                  </span>
+                )}
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text font-semibold">Project Category</span>
                 </label>
                 <div className="px-2 grid grid-cols-2">
                   <label>
@@ -107,7 +145,7 @@ const Projects = () => {
                       value="ai"
                       {...register("category", { required: true })}
                     />
-                    AI
+                    Artificial Intelligence
                   </label>
                 </div>
 
@@ -115,40 +153,6 @@ const Projects = () => {
                   <span className="text-red-600">Category is required</span>
                 )}
               </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Project Description</span>
-                </label>
-                <textarea
-                  type="text"
-                  {...register("description", { required: true })}
-                  name="description"
-                  placeholder="Project Description"
-                  className="input input-bordered"
-                  rows={14}
-                />
-                {errors.description && (
-                  <span className="text-red-600">Description is required</span>
-                )}
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Project Image</span>
-                </label>
-                <input
-                  type="text"
-                  {...register("imgURL", { required: true })}
-                  name="imgURL"
-                  placeholder="Enter Project Image URL"
-                  className="input input-bordered"
-                />
-                {errors.imgURL && (
-                  <span className="text-red-600">
-                    Project image is required
-                  </span>
-                )}
-              </div>
-
               <div className="form-control mt-6">
                 <input
                   className="btn bg-[#181547] hover:bg-[#181547] text-white"

@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Dashboard = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [showWelcomeText, setShowWelcomeText] = useState(true);
-
+  const {user} = useContext(AuthContext);
+  console.log(user);
   useEffect(() => {
     setShowWelcomeText(location.pathname === "/dashboard");
   }, [location.pathname]);
@@ -22,7 +24,9 @@ const Dashboard = () => {
           </label>
           <span>
             {showWelcomeText && (
-              <h3 className="text-2xl sm:text-5xl">Welcome to Code Analyzer</h3>
+              <h3 className="text-xl sm:text-5xl">
+                Welcome <span className="font-semibold text-gray-900">`{user.email.split("@")[0]}`</span> to Code Analyzer
+              </h3>
             )}
           </span>
         </span>
@@ -47,8 +51,8 @@ const Dashboard = () => {
           <li>
             <NavLink to="/dashboard/teams">Team</NavLink>
           </li>
-          <li className="absolute bottom-10 ">
-            <a onClick={() => navigate(-1)}>Back</a>
+          <li className="absolute bottom-10 flex justify-between">
+            <a onClick={() => navigate(-1)}>Back</a> 
           </li>
         </ul>
       </div>
