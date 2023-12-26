@@ -11,18 +11,26 @@ const Teams = () => {
     formState: { errors },
   } = useForm();
 
-  const { user } = useContext(AuthContext);
-  console.log(user);
+  const { user } = useContext(AuthContext); 
 
   const onSubmit = (data) => {
-    console.log(data);
+    const { name, role, imgURL, twitter, linkedin, github, portfolio } = data;
+    const team = {
+      name,
+      role,
+      imgURL,
+      social: {
+        twitter, linkedin, github, portfolio
+      }
+    }
+    console.log(team);
     if (user && user.email) {
-      fetch("http://localhost:5000/add-projects", {
+      fetch("http://localhost:5000/add-team", {
         method: "POST",
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(team),
       })
         .then((res) => res.json())
         .then((data) => {
@@ -30,7 +38,7 @@ const Teams = () => {
             Swal.fire({
               position: "top-center",
               icon: "success",
-              title: "Added a new project.",
+              title: `${name} added as a new team member.`,
               showConfirmButton: false,
               timer: 1500,
             });

@@ -40,6 +40,7 @@ const Team = () => {
     },
     // Add more team members as needed
   ];
+  
 
   return (
     <section className="bg-gray-100  min-h-screen px-2 sm:px-20">

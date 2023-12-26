@@ -5,7 +5,7 @@ const ProjectShowcaseTabs = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   // Sample project data
-  const projectss = [
+  const projectsData = [
     {
       id: 1,
       title: "Project One",
