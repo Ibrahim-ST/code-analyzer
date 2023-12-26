@@ -21,7 +21,7 @@ const TeamMemberCard = ({ member }) => {
       onMouseLeave={() => set({ transform: 'scale(1)', opacity: 1 })}
     >
       <img
-        src={member.image}
+        src={member.imgURL}
         alt={member.name}
         className="w-32 h-32 object-cover mx-auto mb-4 rounded-full shadow-lg"
       />

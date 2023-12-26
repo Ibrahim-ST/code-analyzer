@@ -76,45 +76,41 @@ const Projects = () => {
                 <label className="label">
                   <span className="label-text">Project Category</span>
                 </label>
-                {/* <input
-                  type="text"
-                  {...register("category", { required: true })}
-                  name="category"
-                  placeholder="software | machine-learning"
-                  className="input input-bordered"
-                /> */}
-                <label>
-                  <input
-                    type="radio"
-                    value="software"
-                    {...register("category", { required: true })}
-                  />
-                  Software
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    value="machine-learning"
-                    {...register("category", { required: true })}
-                  />
-                  Machine Learning
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    value="graphic-visual"
-                    {...register("category", { required: true })}
-                  />
-                  Graphic Visual
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    value="ai"
-                    {...register("category", { required: true })}
-                  />
-                  Artificial Intelligence
-                </label>
+                <div className="px-2 grid grid-cols-2">
+                  <label>
+                    <input
+                      type="radio"
+                      value="software"
+                      {...register("category", { required: true })}
+                    />
+                    Software
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      value="machine-learning"
+                      {...register("category", { required: true })}
+                    />
+                    Machine Learning
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      value="graphic-visual"
+                      {...register("category", { required: true })}
+                    />
+                    Graphic Visual
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      value="ai"
+                      {...register("category", { required: true })}
+                    />
+                    AI
+                  </label>
+                </div>
+
                 {errors.category && (
                   <span className="text-red-600">Category is required</span>
                 )}

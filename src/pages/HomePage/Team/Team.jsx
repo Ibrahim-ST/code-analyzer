@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import TeamMemberCard from "../Team/TeamMemberCard ";
 import demo_team from "../../../assets/demo_team.jpg";
@@ -40,7 +40,14 @@ const Team = () => {
     },
     // Add more team members as needed
   ];
-  
+  const [team, setTeam] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/team-members")
+      .then((res) => res.json())
+      .then((data) => setTeam(data));
+  }, [])
+
+  console.log({team});
 
   return (
     <section className="bg-gray-100  min-h-screen px-2 sm:px-20">
@@ -55,7 +62,7 @@ const Team = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {teamMembers.map((member, id) => (
+          {team.map((member, id) => (
             <TeamMemberCard key={id} member={member} />
           ))}
         </div>

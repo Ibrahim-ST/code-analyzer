@@ -48,7 +48,7 @@ const ProjectShowcaseTabs = () => {
       : projects?.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="bg-gray-100 min-h-screen px-20 pt-20">
+    <div className="bg-gray-100 min-h-screen px-20 py-20 ">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-semibold text-gray-800 pt-8 mb-8">
           Our Projects
