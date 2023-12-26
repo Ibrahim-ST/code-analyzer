@@ -1,9 +1,9 @@
+import { useState } from "react";
 import { FaBars } from "react-icons/fa6";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 
 const Dashboard = () => {
-  const location = useLocation();
-  console.log(location);
+
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -15,10 +15,10 @@ const Dashboard = () => {
           </label>
           {location?.pathname == "/dashboard" ? (
             <h3 className="text-2xl sm:text-5xl">Welcome to Code Analyzer</h3>
-            ) : (
-              ""
-              )}
-              <span></span>
+          ) : (
+            ""
+          )}
+          <span></span>
         </span>
 
         <Outlet />
@@ -29,9 +29,8 @@ const Dashboard = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu p-4 w-80 min-h-full bg-gray-900   text-white">
-          {/* Sidebar content here */}
-
+        <ul className="menu p-4 w-80 min-h-full bg-gray-900 text-white flex">
+          {/* Sidebar content here */} 
           <li>
             <NavLink to="/dashboard/projects">Projects</NavLink>
           </li>
@@ -40,6 +39,11 @@ const Dashboard = () => {
           </li>
           <li>
             <a>Settings</a>
+          </li>
+          <li className="absolute bottom-10 uppercase">
+            <NavLink to="/" className="font-bold">
+              Code Analyzer
+            </NavLink>
           </li>
         </ul>
       </div>

@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import demo_project from "../../../assets/demo-project.jpg";
 
 const ProjectShowcaseTabs = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   // Sample project data
-  const projects = [
+  const projectss = [
     {
       id: 1,
       title: "Project One",
@@ -33,11 +33,19 @@ const ProjectShowcaseTabs = () => {
     // Add more projects as needed
   ];
 
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/all-projects")
+    .then(res => res.json())
+    .then(data => setProjects(data))
+
+  }, [])
+  console.log({projects});
   // Filter projects based on the selected category
   const filteredProjects =
     selectedCategory === "all"
       ? projects
-      : projects.filter((project) => project.category === selectedCategory);
+      : projects?.filter((project) => project.category === selectedCategory);
 
   return (
     <div className="bg-gray-100 min-h-screen px-20 pt-20">
@@ -102,15 +110,15 @@ const ProjectShowcaseTabs = () => {
 
         {/* Project Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
+          {filteredProjects?.map((project) => (
             <div
-              key={project.id}
+              key={project._id}
               className="relative overflow-hidden bg-white rounded-md shadow-md cursor-pointer"
             >
               <img
-                src={project.imageUrl}
+                src={project.imgURL}
                 alt={project.title}
-                className="w-full h-50 object-cover transition-transform duration-300 transform-gpu hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-300 transform-gpu hover:scale-110"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
