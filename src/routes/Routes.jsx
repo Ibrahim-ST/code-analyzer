@@ -4,8 +4,11 @@ import Home from "../pages/HomePage/Home/Home";
 import AboutPage from "../pages/AboutPage/AboutPage";
 import ServicesPage from "../pages/ServicesPage/ServicesPage"; 
 import Register from "../pages/AdminPage/Register/Register";
-import Login from "../pages/AdminPage/Login/login";
-import Dashboard from "../pages/DashboardPage/Dashboard";
+import Login from "../pages/AdminPage/Login/login"; 
+import Dashboard from "../layouts/Dashboard";
+import PrivateRoute from "./PrivateRoute";  
+import Projects from "../pages/DashboardPage/Projects/Projects";
+import Teams from "../pages/DashboardPage/Teams/Teams";
 
 export const router = createBrowserRouter([
   {
@@ -35,7 +38,17 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "/dashboard",
-    element: <Dashboard></Dashboard>
+    path: "dashboard",
+    element: <PrivateRoute> <Dashboard></Dashboard> </PrivateRoute>,
+    children: [
+      {
+        path: 'projects',
+        element: <Projects></Projects>
+      },
+      {
+        path: "teams",
+        element: <Teams></Teams>
+      }
+    ]
   }
 ]);
