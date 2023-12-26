@@ -17,7 +17,7 @@ const Projects = () => {
   const onSubmit = (data) => {
     console.log(data);
     if (user && user.email) {
-      fetch("http://localhost:5000/add-projects", {
+      fetch("https://code-analyzer-server.vercel.app/add-projects", {
         method: "POST",
         headers: {
           "content-type": "application/json",

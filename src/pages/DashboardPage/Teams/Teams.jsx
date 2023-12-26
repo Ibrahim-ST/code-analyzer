@@ -25,7 +25,7 @@ const Teams = () => {
     }
     console.log(team);
     if (user && user.email) {
-      fetch("http://localhost:5000/add-team", {
+      fetch("https://code-analyzer-server.vercel.app/add-team", {
         method: "POST",
         headers: {
           "content-type": "application/json",

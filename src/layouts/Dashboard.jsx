@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa6";
-import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [showWelcomeText, setShowWelcomeText] = useState(true);
 
   useEffect(() => {
@@ -34,24 +35,20 @@ const Dashboard = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu p-4 w-80 min-h-full bg-gray-900 text-white flex">
-          {/* Sidebar content here */}
-          {/* <li>
-            <Link to="/dashboard/">Home</Link>
-          </li> */}
+        <ul className="menu p-4 w-80 min-h-full bg-gray-900 text-white flex font-bold">
+          <li className="text-2xl uppercase">
+            <NavLink to="/" className="font-bold">
+              Code Analyzer
+            </NavLink>
+          </li>
           <li>
             <NavLink to="/dashboard/projects">Projects</NavLink>
           </li>
           <li>
             <NavLink to="/dashboard/teams">Team</NavLink>
           </li>
-          <li>
-            <a>Settings</a>
-          </li>
-          <li className="absolute bottom-10 uppercase">
-            <NavLink to="/" className="font-bold">
-              Code Analyzer
-            </NavLink>
+          <li className="absolute bottom-10 ">
+            <a onClick={() => navigate(-1)}>Back</a>
           </li>
         </ul>
       </div>

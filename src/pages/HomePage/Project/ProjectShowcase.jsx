@@ -35,7 +35,7 @@ const ProjectShowcaseTabs = () => {
 
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/all-projects")
+    fetch("https://code-analyzer-server.vercel.app/all-projects")
     .then(res => res.json())
     .then(data => setProjects(data))
 

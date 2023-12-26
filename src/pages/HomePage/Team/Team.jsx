@@ -42,7 +42,7 @@ const Team = () => {
   ];
   const [team, setTeam] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/team-members")
+    fetch("https://code-analyzer-server.vercel.app/team-members")
       .then((res) => res.json())
       .then((data) => setTeam(data));
   }, [])
