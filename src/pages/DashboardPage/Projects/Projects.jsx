@@ -1,8 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useContext, useState } from "react";
-import { Link, json, useNavigate } from "react-router-dom";
-import { FaCheck, FaEye, FaEyeSlash, FaList } from "react-icons/fa";
+import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -10,12 +8,8 @@ const Projects = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
-
-  const from = location.state?.from?.pathname || "/";
-  const navigate = useNavigate();
 
   const { user } = useContext(AuthContext);
   console.log(user);
@@ -49,8 +43,8 @@ const Projects = () => {
       <h1 className="text-5xl font-bold  pt-5 text-white text-center">
         Welcome to Project section
       </h1>
-      <div className=" hero    ">
-        <div className=" mt-20 hero-content flex-col lg:flex-row">
+      <div className="hero">
+        <div className=" mt-10 hero-content flex-col lg:flex-row">
           <div className="w-1/2 text-center lg:text-left text-white">
             <p className="py-6 w-2/3">
               Welcome to our Project Management Dashboard! As an admin, you
@@ -74,22 +68,54 @@ const Projects = () => {
                   placeholder="Project Title"
                   className="input input-bordered"
                 />
-                {errors.name && (
-                  <span className="text-red-600">title is required</span>
+                {errors.title && (
+                  <span className="text-red-600">Title is required</span>
                 )}
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Project Category</span>
                 </label>
-                <input
+                {/* <input
                   type="text"
                   {...register("category", { required: true })}
                   name="category"
                   placeholder="software | machine-learning"
                   className="input input-bordered"
-                />
-                {errors.email && (
+                /> */}
+                <label>
+                  <input
+                    type="radio"
+                    value="software"
+                    {...register("category", { required: true })}
+                  />
+                  Software
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    value="machine-learning"
+                    {...register("category", { required: true })}
+                  />
+                  Machine Learning
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    value="graphic-visual"
+                    {...register("category", { required: true })}
+                  />
+                  Graphic Visual
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    value="ai"
+                    {...register("category", { required: true })}
+                  />
+                  Artificial Intelligence
+                </label>
+                {errors.category && (
                   <span className="text-red-600">Category is required</span>
                 )}
               </div>
@@ -105,7 +131,7 @@ const Projects = () => {
                   className="input input-bordered"
                   rows={14}
                 />
-                {errors.email && (
+                {errors.description && (
                   <span className="text-red-600">Description is required</span>
                 )}
               </div>
@@ -120,7 +146,7 @@ const Projects = () => {
                   placeholder="Enter Project Image URL"
                   className="input input-bordered"
                 />
-                {errors.email && (
+                {errors.imgURL && (
                   <span className="text-red-600">
                     Project image is required
                   </span>
