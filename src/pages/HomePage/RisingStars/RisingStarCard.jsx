@@ -17,7 +17,7 @@ const RisingStarCard = ({ member }) => {
 
   return (
     <animated.div
-      className="p-6 rounded-md shadow-xl cursor-pointer overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105"
+      className="w-full p-6 rounded-md shadow-xl cursor-pointer overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105"
       style={{ ...style }}
       onMouseEnter={() => set({ transform: "scale(1.05)", opacity: 0.9 })}
       onMouseLeave={() => set({ transform: "scale(1)", opacity: 1 })}
@@ -25,7 +25,7 @@ const RisingStarCard = ({ member }) => {
       <img
         src={member.image}
         alt={member.name}
-        className="w-40 h-40 object-cover mx-auto mb-4 rounded-lg"
+        className="w-full h-40 object-cover mx-auto mb-4 rounded-lg"
       />
       <div className="text-center">
         <h3 className="text-xl font-bold mb-2">{member.name}</h3>
