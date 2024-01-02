@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import demo_project from "../../../assets/demo-project.jpg";
+import LoadingIcon from "../../../components/LoadingIcon";
+import useData from "../../../hooks/useData";
 
 const ProjectShowcaseTabs = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("all"); 
+  // const [projects, setProjects] = useState([]);
 
   // Sample project data
   const projectsData = [
@@ -33,14 +36,13 @@ const ProjectShowcaseTabs = () => {
     // Add more projects as needed
   ];
 
-  const [projects, setProjects] = useState([]);
-  useEffect(() => {
-    fetch("https://code-analyzer-server.vercel.app/all-projects")
-    .then(res => res.json())
-    .then(data => setProjects(data))
+  const projectURL = "https://code-analyzer-server.vercel.app/all-projects";
+  const { data: projects, loading } = useData(projectURL);
 
-  }, [])
-  console.log({projects});
+  if (loading) {
+    return <LoadingIcon />;
+  }
+  console.log({ projects });
   // Filter projects based on the selected category
   const filteredProjects =
     selectedCategory === "all"

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import React, { useEffect, useState } from "react"; 
 import TeamMemberCard from "../Team/TeamMemberCard ";
 import demo_team from "../../../assets/demo_team.jpg";
+import useData from "../../../hooks/useData";
+import LoadingIcon from "../../../components/LoadingIcon";
 
 const Team = () => {
   const teamMembers = [
@@ -40,15 +41,12 @@ const Team = () => {
     },
     // Add more team members as needed
   ];
-  const [team, setTeam] = useState([]);
-  useEffect(() => {
-    fetch("https://code-analyzer-server.vercel.app/team-members")
-      .then((res) => res.json())
-      .then((data) => setTeam(data));
-  }, [])
-
-  console.log({team});
-
+  
+  const teamURL = "https://code-analyzer-server.vercel.app/team-members"
+  const {data:team, loading} = useData(teamURL);
+  if(loading){
+    return <LoadingIcon />
+  }
   return (
     <section className="bg-gray-100  min-h-screen px-2 sm:px-20">
       <div className="container mx-auto">
