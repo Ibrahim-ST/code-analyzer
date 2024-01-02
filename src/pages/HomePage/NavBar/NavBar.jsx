@@ -50,11 +50,9 @@ const NavBar = () => {
     };
   }, []);
 
-  return (
-    <div className="">
-      <div>
+  return ( 
         <div
-          className={`navbar fixed layout z-10 border-b border-b-gray-900 ${
+          className={`navbar fixed layout z-10 border-b border-b-gray-900 h-0 ${
             scroll
               ? "bg-white text-black"
               : "bg-transparent bg-opacity-75 backdrop-filter backdrop-blur-3xl text-white"
@@ -80,13 +78,13 @@ const NavBar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 bg-purple-300"
+                className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 bg-cyan-900 text-white "
               >
                 {navOptions}
               </ul>
             </div>
             <a href="#" className="flex justify-between items-center ">
-              <img className="w-16" src={logo} alt="" />
+              <img className="w-10" src={logo} alt="" />
               {/* <img className="w-1/2 " src={logoText} alt="" /> */}
               <h4 className="font-semibold text-xl md:text-2xl pl-3">
                 CODE ANALYZER
@@ -98,7 +96,7 @@ const NavBar = () => {
               {navOptions}
             </ul>
           </div>
-          <div className="navbar-end hidden sm:flex">
+          <div className="navbar-end hidden sm:flex items-center">
             {user ? (
               <>
                 <div onClick={handleLogout}>
@@ -109,9 +107,7 @@ const NavBar = () => {
               <TopHeaderButton title={"Contact Us"} />
             )}
           </div>
-        </div>
-      </div>
-    </div>
+        </div> 
   );
 };
 
