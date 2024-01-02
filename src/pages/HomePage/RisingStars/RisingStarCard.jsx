@@ -23,7 +23,7 @@ const RisingStarCard = ({ member }) => {
       onMouseLeave={() => set({ transform: "scale(1)", opacity: 1 })}
     >
       <img
-        src={member.image}
+        src={member.imgURL}
         alt={member.name}
         className="w-full h-40 object-cover mx-auto mb-4 rounded-lg"
       />

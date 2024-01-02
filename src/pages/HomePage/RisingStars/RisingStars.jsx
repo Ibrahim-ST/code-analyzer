@@ -4,53 +4,62 @@ import star_1 from "../../../assets/r1.jpg";
 import star_2 from "../../../assets/r2.jpg";
 import star_3 from "../../../assets/r3.jpg";
 import star_4 from "../../../assets/r4.jpg";
+import useData from "../../../hooks/useData";
+import LoadingIcon from "../../../components/LoadingIcon";
+
 const RisingStars = () => {
-  const risingStars = [
-    {
-      name: "John Smith",
-      role: "Frontend Developer",
-      image: star_1,
-      social: {
-        twitter: "https://twitter.com/johnsmith",
-        linkedin: "https://www.linkedin.com/in/johnsmith",
-        github: "https://github.com/johnsmith",
-        portfolio: "https://www.johnsmith.dev",
-      },
-    },
-    {
-      name: "Ella Thompson",
-      role: "Product Designer",
-      image: star_2,
-      social: {
-        twitter: "https://twitter.com/ellathompson",
-        linkedin: "https://www.linkedin.com/in/ellathompson",
-        github: "https://github.com/ellathompson",
-        portfolio: "https://www.ellathompson.design",
-      },
-    },
-    {
-      name: "Mike Johnson",
-      role: "Backend Developer",
-      image: star_3,
-      social: {
-        twitter: "https://twitter.com/mikejohnson",
-        linkedin: "https://www.linkedin.com/in/mikejohnson",
-        github: "https://github.com/mikejohnson",
-        portfolio: "https://www.mikejohnson.dev",
-      },
-    },
-    {
-      name: "Emma Davis",
-      role: "UX/UI Designer",
-      image: star_4,
-      social: {
-        twitter: "https://twitter.com/emmadavis",
-        linkedin: "https://www.linkedin.com/in/emmadavis",
-        github: "https://github.com/emmadavis",
-        portfolio: "https://www.emmadavis.design",
-      },
-    },
-  ];
+  // const risingStars = [
+  //   {
+  //     name: "John Smith",
+  //     role: "Frontend Developer",
+  //     image: star_1,
+  //     social: {
+  //       twitter: "https://twitter.com/johnsmith",
+  //       linkedin: "https://www.linkedin.com/in/johnsmith",
+  //       github: "https://github.com/johnsmith",
+  //       portfolio: "https://www.johnsmith.dev",
+  //     },
+  //   },
+  //   {
+  //     name: "Ella Thompson",
+  //     role: "Product Designer",
+  //     image: star_2,
+  //     social: {
+  //       twitter: "https://twitter.com/ellathompson",
+  //       linkedin: "https://www.linkedin.com/in/ellathompson",
+  //       github: "https://github.com/ellathompson",
+  //       portfolio: "https://www.ellathompson.design",
+  //     },
+  //   },
+  //   {
+  //     name: "Mike Johnson",
+  //     role: "Backend Developer",
+  //     image: star_3,
+  //     social: {
+  //       twitter: "https://twitter.com/mikejohnson",
+  //       linkedin: "https://www.linkedin.com/in/mikejohnson",
+  //       github: "https://github.com/mikejohnson",
+  //       portfolio: "https://www.mikejohnson.dev",
+  //     },
+  //   },
+  //   {
+  //     name: "Emma Davis",
+  //     role: "UX/UI Designer",
+  //     image: star_4,
+  //     social: {
+  //       twitter: "https://twitter.com/emmadavis",
+  //       linkedin: "https://www.linkedin.com/in/emmadavis",
+  //       github: "https://github.com/emmadavis",
+  //       portfolio: "https://www.emmadavis.design",
+  //     },
+  //   },
+  // ];
+  
+  const risingStarsURL = "https://code-analyzer-server.vercel.app/rising-stars";
+  const { data: risingStars, loading } = useData(risingStarsURL);
+  if (loading) {
+    return <LoadingIcon />;
+  }
 
   return (
     <section className="bg-gray-100 py-48 px-20">
