@@ -13,12 +13,12 @@ import ServicesPage from "../../ServicesPage/ServicesPage";
 const Home = () => {
   return (
     <div className="font-inter ">
-      <NavBar></NavBar>
-      <Banner></Banner>
-      <About></About>
+      <NavBar />
+      <Banner />
+      <About />
       <ServicesPage />
       <Project />
-      <Stats></Stats>
+      <Stats />
       <Team />
       <RisingStars />
       <Testimonial />

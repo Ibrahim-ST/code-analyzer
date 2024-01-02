@@ -25,7 +25,11 @@ const Dashboard = () => {
           <span>
             {showWelcomeText && (
               <h3 className="text-xl sm:text-5xl">
-                Welcome <span className="font-semibold text-gray-900">`{user.email.split("@")[0]}`</span> to Code Analyzer
+                Welcome{" "}
+                <span className="font-semibold text-gray-900">
+                  `{user.email.split("@")[0]}`
+                </span>{" "}
+                to Code Analyzer
               </h3>
             )}
           </span>
@@ -51,8 +55,11 @@ const Dashboard = () => {
           <li>
             <NavLink to="/dashboard/teams">Team</NavLink>
           </li>
+          <li>
+            <NavLink to="/dashboard/rising-stars">Rising Stars</NavLink>
+          </li>
           <li className="absolute bottom-10 flex justify-between">
-            <a onClick={() => navigate(-1)}>Back</a> 
+            <a onClick={() => navigate(-1)}>Back</a>
           </li>
         </ul>
       </div>

@@ -9,6 +9,7 @@ import Dashboard from "../layouts/Dashboard";
 import PrivateRoute from "./PrivateRoute";  
 import Projects from "../pages/DashboardPage/Projects/Projects";
 import Teams from "../pages/DashboardPage/Teams/Teams";
+import RisingStars from "../pages/DashboardPage/RisingStars/RisingStars";
 
 export const router = createBrowserRouter([
   {
@@ -39,16 +40,25 @@ export const router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element: <PrivateRoute> <Dashboard></Dashboard> </PrivateRoute>,
+    element: (
+      <PrivateRoute>
+        {" "}
+        <Dashboard></Dashboard>{" "}
+      </PrivateRoute>
+    ),
     children: [
       {
-        path: 'projects',
-        element: <Projects></Projects>
+        path: "projects",
+        element: <Projects></Projects>,
       },
       {
         path: "teams",
-        element: <Teams></Teams>
-      }
-    ]
-  }
+        element: <Teams></Teams>,
+      },
+      {
+        path: "rising-stars",
+        element: <RisingStars></RisingStars>
+      },
+    ],
+  },
 ]);

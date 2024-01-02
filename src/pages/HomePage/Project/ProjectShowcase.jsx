@@ -4,7 +4,7 @@ import LoadingIcon from "../../../components/LoadingIcon";
 import useData from "../../../hooks/useData";
 
 const ProjectShowcaseTabs = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all"); 
+  const [selectedCategory, setSelectedCategory] = useState("all");
   // const [projects, setProjects] = useState([]);
 
   // Sample project data
