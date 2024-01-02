@@ -8,6 +8,7 @@ import Testimonial from "../Testimonial/Testimonial";
 import NavBar from "../NavBar/NavBar";
 import Stats from "../Stats/Stats";
 import Brand from "../Brands/Brands";
+import ServicesPage from "../../ServicesPage/ServicesPage";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <NavBar></NavBar>
       <Banner></Banner>
       <About></About>
+      <ServicesPage />
       <Project />
       <Stats></Stats>
       <Team />
