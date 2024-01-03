@@ -54,12 +54,12 @@ const RisingStars = () => {
   //     },
   //   },
   // ];
-  
+
   const risingStarsURL = "https://code-analyzer-server.vercel.app/rising-stars";
   const { data: risingStars, loading } = useData(risingStarsURL);
-  if (loading) {
-    return <LoadingIcon />;
-  }
+  // if (loading) {
+  //   return <LoadingIcon />;
+  // }
 
   return (
     <section className="bg-gray-100 py-48 px-20">
@@ -77,6 +77,11 @@ const RisingStars = () => {
             <RisingStarCard key={index} member={member} />
           ))}
         </div>
+        {loading &&
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+           
+        </div>}
+
       </div>
     </section>
   );
