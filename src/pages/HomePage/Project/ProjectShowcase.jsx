@@ -39,10 +39,6 @@ const ProjectShowcaseTabs = () => {
   const projectURL = "https://code-analyzer-server.vercel.app/all-projects";
   const { data: projects, loading } = useData(projectURL);
 
-  if (loading) {
-    return <LoadingIcon />;
-  }
-  console.log({ projects });
   // Filter projects based on the selected category
   const filteredProjects =
     selectedCategory === "all"
@@ -129,6 +125,13 @@ const ProjectShowcaseTabs = () => {
             </div>
           ))}
         </div>
+        {loading && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-20">
+            <LoadingIcon />
+            <LoadingIcon />
+            <LoadingIcon />
+          </div>
+        )}
       </div>
     </div>
   );
