@@ -55,7 +55,7 @@ const RisingStars = () => {
   //   },
   // ];
 
-  const risingStarsURL = "https://code-analyzer-server.vercel.app/rising-stars";
+  const risingStarsURL = "risingStars.json";
   const { data: risingStars, loading } = useData(risingStarsURL);
   // if (loading) {
   //   return <LoadingIcon />;

@@ -36,7 +36,7 @@ const ProjectShowcaseTabs = () => {
     // Add more projects as needed
   ];
 
-  const projectURL = "https://code-analyzer-server.vercel.app/all-projects";
+  const projectURL = "projects.json";
   const { data: projects, loading } = useData(projectURL);
 
   // Filter projects based on the selected category
@@ -108,9 +108,9 @@ const ProjectShowcaseTabs = () => {
 
         {/* Project Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects?.map((project) => (
+          {filteredProjects?.map((project, index) => (
             <div
-              key={project._id}
+              key={index}
               className="relative overflow-hidden bg-white rounded-md shadow-md cursor-pointer"
             >
               <img

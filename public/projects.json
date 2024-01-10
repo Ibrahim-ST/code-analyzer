@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Project One",
+    "category": "software",
+    "description": "Description for Project One. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imgURL": "https://i.ibb.co/yPhbY58/Screenshot-23.png"
+  },
+  {
+    "id": 2,
+    "title": "Project Two",
+    "category": "machine-learning",
+    "description": "Description for Project Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imgURL": "https://i.ibb.co/yPhbY58/Screenshot-23.png"
+  },
+  {
+    "id": 3,
+    "title": "Project Two",
+    "category": "machine-learning",
+    "description": "Description for Project Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "imgURL": "https://i.ibb.co/yPhbY58/Screenshot-23.png"
+  }
+]

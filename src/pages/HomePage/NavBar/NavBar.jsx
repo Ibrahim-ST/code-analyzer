@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import logo from "../../../assets/logo.png"; 
 import { AuthContext } from "../../../providers/AuthProvider";
 import TopHeaderButton from "../../../components/TopHeaderButton";
+import { Link } from "react-router-dom";
 const NavBar = () => {
   const {user, logOut} = useContext(AuthContext);
   console.log(user);
@@ -24,7 +25,7 @@ const NavBar = () => {
         <a href="/services">Services</a>
       </li>
       <li>
-        <li to="/projects">Projects</li>
+        <Link to="/projects">Projects</Link>
       </li>
       <li>
         <a href="#contact">Contact</a>

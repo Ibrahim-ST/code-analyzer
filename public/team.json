@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Md. Hosen Zisad",
+    "role": "Research & Software Engineer",
+    "imgURL": "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+    "social": {
+      "twitter": "https://twitter.com/johndoe",
+      "linkedin": "https://www.linkedin.com/in/johndoe",
+      "github": "https://github.com/johndoe",
+      "portfolio": "https://www.johndoe.com"
+    }
+  },
+  {
+    "name": "Sultan Md. Ayman",
+    "role": "Frontend Engineer & Visual Designer",
+    "imgURL": "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+    "social": {
+      "twitter": "https://twitter.com/janesmith",
+      "linkedin": "https://www.linkedin.com/in/janesmith",
+      "github": "https://github.com/janesmith",
+      "portfolio": "https://www.johndoe.com"
+    }
+  },
+  {
+    "name": "Md. Ibrahim Siddiquee",
+    "role": "Software Engineer",
+    "imgURL": "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+    "social": {
+      "twitter": "https://twitter.com/janesmith",
+      "linkedin": "https://www.linkedin.com/in/janesmith",
+      "github": "https://github.com/janesmith",
+      "portfolio": "https://www.johndoe.com"
+    }
+  }
+]

@@ -42,7 +42,7 @@ const Team = () => {
     // Add more team members as needed
   ];
 
-  const teamURL = "https://code-analyzer-server.vercel.app/team-members";
+  const teamURL = "team.json";
   const { data: team, loading } = useData(teamURL);
   
   return (

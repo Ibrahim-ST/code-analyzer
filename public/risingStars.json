@@ -1,0 +1,46 @@
+[
+  {
+    "name": "John Smith",
+    "role": "Frontend Developer",
+    "imgURL": "https://i.ibb.co/Bc2HRXH/r1.jpg",
+    "social": {
+      "twitter": "https://twitter.com/johnsmith",
+      "linkedin": "https://www.linkedin.com/in/johnsmith",
+      "github": "https://github.com/johnsmith",
+      "portfolio": "https://www.johnsmith.dev"
+    }
+  },
+  {
+    "name": "Ella Thompson",
+    "role": "Product Designer",
+    "imgURL": "https://i.ibb.co/Bc2HRXH/r1.jpg",
+    "social": {
+      "twitter": "https://twitter.com/ellathompson",
+      "linkedin": "https://www.linkedin.com/in/ellathompson",
+      "github": "https://github.com/ellathompson",
+      "portfolio": "https://www.ellathompson.design"
+    }
+  },
+  {
+    "name": "Mike Johnson",
+    "role": "Backend Developer",
+    "imgURL": "https://i.ibb.co/Bc2HRXH/r1.jpg",
+    "social": {
+      "twitter": "https://twitter.com/mikejohnson",
+      "linkedin": "https://www.linkedin.com/in/mikejohnson",
+      "github": "https://github.com/mikejohnson",
+      "portfolio": "https://www.mikejohnson.dev"
+    }
+  },
+  {
+    "name": "Emma Davis",
+    "role": "UX/UI Designer",
+    "imgURL": "https://i.ibb.co/Bc2HRXH/r1.jpg",
+    "social": {
+      "twitter": "https://twitter.com/emmadavis",
+      "linkedin": "https://www.linkedin.com/in/emmadavis",
+      "github": "https://github.com/emmadavis",
+      "portfolio": "https://www.emmadavis.design"
+    }
+  }
+]
