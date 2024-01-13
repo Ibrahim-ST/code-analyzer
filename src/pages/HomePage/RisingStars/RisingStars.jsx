@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import RisingStarCard from "./RisingStarCard";
 import star_1 from "../../../assets/r1.jpg";
 import star_2 from "../../../assets/r2.jpg";
@@ -8,59 +8,34 @@ import useData from "../../../hooks/useData";
 import LoadingIcon from "../../../components/LoadingIcon";
 
 const RisingStars = () => {
-  // const risingStars = [
-  //   {
-  //     name: "John Smith",
-  //     role: "Frontend Developer",
-  //     image: star_1,
-  //     social: {
-  //       twitter: "https://twitter.com/johnsmith",
-  //       linkedin: "https://www.linkedin.com/in/johnsmith",
-  //       github: "https://github.com/johnsmith",
-  //       portfolio: "https://www.johnsmith.dev",
-  //     },
-  //   },
-  //   {
-  //     name: "Ella Thompson",
-  //     role: "Product Designer",
-  //     image: star_2,
-  //     social: {
-  //       twitter: "https://twitter.com/ellathompson",
-  //       linkedin: "https://www.linkedin.com/in/ellathompson",
-  //       github: "https://github.com/ellathompson",
-  //       portfolio: "https://www.ellathompson.design",
-  //     },
-  //   },
-  //   {
-  //     name: "Mike Johnson",
-  //     role: "Backend Developer",
-  //     image: star_3,
-  //     social: {
-  //       twitter: "https://twitter.com/mikejohnson",
-  //       linkedin: "https://www.linkedin.com/in/mikejohnson",
-  //       github: "https://github.com/mikejohnson",
-  //       portfolio: "https://www.mikejohnson.dev",
-  //     },
-  //   },
-  //   {
-  //     name: "Emma Davis",
-  //     role: "UX/UI Designer",
-  //     image: star_4,
-  //     social: {
-  //       twitter: "https://twitter.com/emmadavis",
-  //       linkedin: "https://www.linkedin.com/in/emmadavis",
-  //       github: "https://github.com/emmadavis",
-  //       portfolio: "https://www.emmadavis.design",
-  //     },
-  //   },
-  // ];
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(false);
+  // const [risingStars, setRisingStars] = useState([]);
 
-  const risingStarsURL = "risingStars.json";
-  const { data: risingStars, loading } = useData(risingStarsURL);
-  // if (loading) {
-  //   return <LoadingIcon />;
-  // }
+  // const fetchData = async () => {
+  //   setLoading(true);
+  //   try {
+  //     const response = await fetch("https://code-analyzer-server.vercel.app/rising-stars");
+  //     if (!response.ok) {
+  //       throw new Error("Failed to fetch data");
+  //     }
 
+  //     const data = await response.json();
+  //     setLoading(false);
+  //     setRisingStars(data);
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //     setError(true);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  const baseURL = "https://code-analyzer-server.vercel.app/rising-stars";
+
+  const { data: risingStars, loading, error } = useData(baseURL);
   return (
     <section className="bg-gray-100 py-48 px-20">
       <div className="container mx-auto text-center">
@@ -74,16 +49,14 @@ const RisingStars = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {risingStars.map((member, index) => (
-            <RisingStarCard key={index} member={member} />
+            <RisingStarCard
+              key={index}
+              member={member}
+              loading={loading}
+              error={error}
+            />
           ))}
         </div>
-        {loading && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-20">
-            <LoadingIcon />
-            <LoadingIcon />
-            <LoadingIcon />
-          </div>
-        )}
       </div>
     </section>
   );

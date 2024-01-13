@@ -1,29 +1,31 @@
 import { useEffect, useState } from "react";
 
-const useLoading = (url) => {
+const useData = (url) => {
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       try {
-        const res = await fetch(url);
-        if (!res.ok) {
-          throw new Error("Network response was not okay");
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
         }
-        const responseData = await res.json();
-        setData(responseData);
-      } catch (error) {
-        console.log("Error fetching data", error);
-      } finally {
+
+        const data = await response.json();
         setLoading(false);
+        setData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setError(true);
       }
     };
-
     fetchData();
   }, [url]);
 
-  return { data, loading };
+  return { data, loading, error };
 };
 
-export default useLoading;
+export default useData;
